@@ -1,0 +1,26 @@
+---
+- hosts: k8s
+  become: true
+
+  roles:
+    - common
+    - containerd
+    - kubernetes
+
+- hosts: k8s_master
+  become: true
+
+  roles:
+    - control-plane
+
+- hosts: k8s_workers
+  become: true
+
+  roles:
+    - workers
+
+- hosts: k8s_master
+  become: true
+
+  roles:
+    - cilium
