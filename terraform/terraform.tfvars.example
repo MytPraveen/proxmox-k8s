@@ -1,0 +1,2 @@
+proxmox_endpoint = "https://YOUR-PROXMOX-IP:8006/api2/json"
+proxmox_api_token = "USER@pam!TOKEN=UUID"
