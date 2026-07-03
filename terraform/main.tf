@@ -10,9 +10,10 @@ module "k8s_master" {
   vm_name     = "k8s-master"
   template_id = 9000
 
-  cpu_cores = 2
-  memory    = 4096
-  disk_size = 50
+  cpu_cores      = 2
+  memory         = 4096
+  disk_size      = 50
+  data_disk_size = 20
 
   datastore = "local-lvm"
   bridge    = "vmbr0"
@@ -32,9 +33,10 @@ module "k8s_worker1" {
   vm_name     = "k8s-worker1"
   template_id = 9000
 
-  cpu_cores = 2
-  memory    = 4096
-  disk_size = 50
+  cpu_cores      = 2
+  memory         = 4096
+  disk_size      = 50
+  data_disk_size = 20
 
   datastore = "local-lvm"
   bridge    = "vmbr0"
@@ -54,9 +56,10 @@ module "k8s_worker2" {
   vm_name     = "k8s-worker2"
   template_id = 9000
 
-  cpu_cores = 2
-  memory    = 4096
-  disk_size = 50
+  cpu_cores      = 2
+  memory         = 4096
+  disk_size      = 50
+  data_disk_size = 20
 
   datastore = "local-lvm"
   bridge    = "vmbr0"

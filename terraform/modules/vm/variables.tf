@@ -49,3 +49,9 @@ variable "username" {
 variable "ssh_public_key" {
   type = string
 }
+
+variable "data_disk_size" {
+  description = "Additional data disk for Longhorn"
+  type        = number
+  default     = 20
+}

@@ -23,6 +23,12 @@ resource "proxmox_virtual_environment_vm" "this" {
     size         = var.disk_size
   }
 
+  disk {
+  datastore_id = var.datastore
+  interface    = "scsi1"
+  size         = var.data_disk_size
+  }
+
   network_device {
     bridge = var.bridge
   }
